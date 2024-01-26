@@ -1,6 +1,6 @@
 ---
 title: Gaia
-publishDate: 2020-03-04 00:00:00
+publishDate: 2022-11-04 00:00:00
 img: /assets/Gaia_presentation.jpg
 img_alt: image du réseau social Gaia
 description: |

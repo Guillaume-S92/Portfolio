@@ -1,6 +1,6 @@
 ---
 title: Kanap
-publishDate: 2019-10-02 00:00:00
+publishDate: 2022-02-05 00:00:00
 img: /assets/Kanap.jpg
 img_alt: Image du site Kanap.
 description: |

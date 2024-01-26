@@ -1,6 +1,6 @@
 ---
 title: La Panthère
-publishDate: 2019-12-01 00:00:00
+publishDate: 2021-12-01 00:00:00
 img: /assets/La Panthère.jpg
 img_alt: Image du site de l'agence La Panthère
 description: |

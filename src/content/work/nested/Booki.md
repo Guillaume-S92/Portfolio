@@ -1,6 +1,6 @@
 ---
 title: Booki
-publishDate: 2019-03-02 00:00:00
+publishDate: 2021-10-03 00:00:00
 img: /assets/booki.jpg
 img_alt: image du site de vacance booki
 description: |

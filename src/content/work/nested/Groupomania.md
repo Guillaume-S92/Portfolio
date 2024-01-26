@@ -1,6 +1,6 @@
 ---
 title: Groupomania
-publishDate: 2020-03-04 00:00:00
+publishDate: 2022-07-04 00:00:00
 img: /assets/Groupomania.jpg
 img_alt: image du réseau social Groupomania
 description: |

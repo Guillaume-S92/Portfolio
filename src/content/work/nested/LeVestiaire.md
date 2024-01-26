@@ -1,6 +1,6 @@
 ---
 title: Le Vestiaire
-publishDate: 2020-03-04 00:00:00
+publishDate: 2023-05-04 00:00:00
 img: /assets/Le_Vestiaire.jpg
 img_alt: image du site de vente de vétements Le Vestiaire
 description: |
