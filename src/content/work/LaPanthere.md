@@ -1,7 +1,7 @@
 ---
 title: La Panthère
 publishDate: 2021-12-01 00:00:00
-img: /assets/La Panthère.jpg
+img: /assets/La-Panthère-Agence-de-web-design-lyonnaise.jpg
 img_alt: Image du site de l'agence La Panthère
 description: |
   Optimisation SEO du site La Panthère et mise au norme des régles du WCAG.

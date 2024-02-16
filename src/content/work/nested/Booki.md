@@ -1,7 +1,7 @@
 ---
 title: Booki
 publishDate: 2021-10-03 00:00:00
-img: /assets/booki.jpg
+img: /assets/BookiPresentation.jpg
 img_alt: image du site de vacance booki
 description: |
   Voici mon premier projet dans le cadre de mes études pour apprendre les bases du code en html css! (résultat du site consultable en bas de la page)
