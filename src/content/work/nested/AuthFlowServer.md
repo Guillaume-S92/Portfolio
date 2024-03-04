@@ -1,6 +1,6 @@
 ---
 title: AuthFlowServer
-publishDate: 2023-02-08 00:00:00
+publishDate: 2024-02-08 00:00:00
 img: /assets/javaserver.jpg
 img_alt: image du logo Java représenté dans un ordinateur portable
 description: |
