@@ -3,6 +3,7 @@ title: Gaia
 publishDate: 2022-11-04 00:00:00
 img: /assets/Gaia_presentation.jpg
 img_alt: image du réseau social Gaia
+img_layout: screenshot
 description: |
   Développement d'un réseau social pour les passionnés de nature.
 tags:

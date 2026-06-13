@@ -3,6 +3,7 @@ title: Le Vestiaire
 publishDate: 2023-05-04 00:00:00
 img: /assets/Le_Vestiaire.jpg
 img_alt: image du site de vente de vétements Le Vestiaire
+img_layout: screenshot
 description: |
   Développement d'un site e-commerce basé sur les ventes de vétements.
 tags:

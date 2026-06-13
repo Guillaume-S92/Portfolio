@@ -98,19 +98,21 @@ const projects = (await getCollection("work"))
   }
 
   .hero img {
-    aspect-ratio: 5 / 4;
+    width: min(78vw, 18rem);
+    aspect-ratio: 4 / 5;
     object-fit: cover;
-    object-position: top;
-    border-radius: 1.5rem;
+    object-position: 50% 32%;
+    border-radius: 2rem;
     box-shadow: var(--shadow-md);
   }
 
   @media (min-width: 50em) {
     .hero {
       display: grid;
-      grid-template-columns: 6fr 4fr;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
       padding-inline: 2.5rem;
-      gap: 3.75rem;
+      gap: clamp(3rem, 7vw, 6rem);
     }
 
     .roles {
@@ -120,9 +122,12 @@ const projects = (await getCollection("work"))
     }
 
     .hero img {
+      width: clamp(15rem, 22vw, 19rem);
       aspect-ratio: 3 / 4;
-      border-radius: 4.5rem;
+      justify-self: end;
+      border-radius: 3rem;
       object-fit: cover;
+      object-position: 50% 30%;
     }
   }
 

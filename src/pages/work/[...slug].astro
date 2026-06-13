@@ -45,7 +45,13 @@ const { Content } = await entry.render();
 			</header>
 			<main class="wrapper">
 				<div class="stack gap-10 content">
-					{entry.data.img && <img src={entry.data.img} alt={entry.data.img_alt || ''} />}
+					{
+						entry.data.img && (
+							<div class:list={['hero-media', `image-${entry.data.img_layout}`]}>
+								<img src={entry.data.img} alt={entry.data.img_alt || ''} />
+							</div>
+						)
+					}
 					<div class="content">
 						<Content />
 					</div>
@@ -90,6 +96,57 @@ const { Content } = await entry.render();
 		margin-inline: auto;
 	}
 
+	.hero-media {
+		display: grid;
+		place-items: center;
+		width: 100%;
+		max-width: 72rem;
+		min-height: 14rem;
+		margin-inline: auto;
+		overflow: hidden;
+		border: 1px solid var(--gray-800);
+		border-radius: 1.5rem;
+		background: var(--gradient-subtle);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.hero-media img {
+		display: block;
+		max-width: 100%;
+		max-height: 42rem;
+	}
+
+	.hero-media.image-cover img {
+		width: 100%;
+		height: clamp(18rem, 55vw, 42rem);
+		object-fit: cover;
+	}
+
+	.hero-media.image-screenshot {
+		padding: clamp(0.5rem, 2vw, 1.5rem);
+	}
+
+	.hero-media.image-screenshot img {
+		width: 100%;
+		height: auto;
+		object-fit: contain;
+		border-radius: 0.75rem;
+	}
+
+	.hero-media.image-logo {
+		min-height: clamp(16rem, 42vw, 28rem);
+		padding: clamp(2rem, 8vw, 5rem);
+		background: #fff;
+	}
+
+	.hero-media.image-logo img {
+		width: auto;
+		height: auto;
+		max-width: min(100%, 28rem);
+		max-height: 18rem;
+		object-fit: contain;
+	}
+
 	.content > :global(* + *) {
 		margin-top: 1rem;
 	}
@@ -103,10 +160,28 @@ const { Content } = await entry.render();
 	}
 
 	.content :global(img) {
+		display: block;
+		width: auto;
+		max-width: 100%;
+		height: auto;
+		margin-inline: auto;
 		border-radius: 1.5rem;
 		box-shadow: var(--shadow-sm);
 		background: var(--gradient-subtle);
 		border: 1px solid var(--gray-800);
+	}
+
+	.content :global(img + img) {
+		margin-top: 2rem;
+	}
+
+	.content :global(img[src^='/assets/medilabo-']) {
+		clip-path: inset(7px round 1.5rem);
+		margin-block: -7px;
+	}
+
+	.content :global(img[src^='/assets/medilabo-'] + img[src^='/assets/medilabo-']) {
+		margin-top: calc(2rem - 7px);
 	}
 
 	.content :global(blockquote) {

@@ -3,6 +3,7 @@ title: SecureConnect
 publishDate: 2024-02-20 00:00:00
 img: /assets/SecureConnect.jpg
 img_alt: Image du formulaire de connexion de l'application Secure Connect
+img_layout: screenshot
 description: |
   Projet de Gestion des Utilisateurs avec Spring Boot.
 tags:

@@ -3,6 +3,7 @@ title: Ohmyfood
 publishDate: 2021-11-03 00:00:00
 img: /assets/Ohmyfood.jpg
 img_alt: image du site Ohmyfood
+img_layout: screenshot
 description: |
   Développement d'un site de restauration dans le cadre de l'apprentissage de SASS et des animations.
 tags:

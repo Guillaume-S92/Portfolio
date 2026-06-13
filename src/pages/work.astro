@@ -11,6 +11,15 @@ import Grid from "../components/Grid.astro";
 const projects = (await getCollection("work")).sort(
   (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
 );
+
+const isJavaProject = (project: (typeof projects)[number]) =>
+  project.data.tags.some((tag) => {
+    const normalizedTag = tag.toLowerCase();
+    return normalizedTag === "java" || normalizedTag.startsWith("spring");
+  });
+
+const javaProjects = projects.filter(isJavaProject);
+const javascriptProjects = projects.filter((project) => !isJavaProject(project));
 ---
 
 <BaseLayout
@@ -24,16 +33,92 @@ const projects = (await getCollection("work")).sort(
         tagline="Découvrez mes derniers projets réalisés dans le cadre de mes études ou pour moi-même."
         align="start"
       />
-      <Grid variant="offset">
-        {
-          projects.map((project) => (
-            <li>
-              <PortfolioPreview project={project} />
-            </li>
-          ))
-        }
-      </Grid>
+      <section class="project-section stack gap-6">
+        <header class="section-header stack gap-2">
+          <p class="eyebrow">Back-end et applications</p>
+          <h2>Java</h2>
+          <p>
+            API REST, applications Spring Boot, sécurité, tests et architecture
+            microservices.
+          </p>
+        </header>
+        <Grid variant="offset">
+          {
+            javaProjects.map((project) => (
+              <li>
+                <PortfolioPreview project={project} />
+              </li>
+            ))
+          }
+        </Grid>
+      </section>
+
+      <section class="project-section stack gap-6">
+        <header class="section-header stack gap-2">
+          <p class="eyebrow">Mes précédents projets</p>
+          <h2>JavaScript et web</h2>
+          <p>
+            Intégration, applications front-end, API Node.js et projets
+            full-stack réalisés au début de mon parcours.
+          </p>
+        </header>
+        <Grid variant="offset">
+          {
+            javascriptProjects.map((project) => (
+              <li>
+                <PortfolioPreview project={project} />
+              </li>
+            ))
+          }
+        </Grid>
+      </section>
     </main>
     <ContactCTA />
   </div>
 </BaseLayout>
+
+<style>
+  .project-section {
+    padding-top: 2rem;
+  }
+
+  .project-section + .project-section {
+    margin-top: 5rem;
+    padding-top: 5rem;
+    border-top: 1px solid var(--gray-800);
+  }
+
+  .section-header {
+    max-width: 48rem;
+  }
+
+  .section-header h2 {
+    font-size: var(--text-3xl);
+  }
+
+  .section-header p:last-child {
+    max-width: 58ch;
+    color: var(--gray-300);
+    font-size: var(--text-lg);
+  }
+
+  .eyebrow {
+    color: var(--accent-regular);
+    font-family: var(--font-brand);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: 50em) {
+    .project-section + .project-section {
+      margin-top: 8rem;
+      padding-top: 8rem;
+    }
+
+    .section-header h2 {
+      font-size: var(--text-5xl);
+    }
+  }
+</style>

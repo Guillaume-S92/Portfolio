@@ -3,6 +3,7 @@ title: Hot Takes
 publishDate: 2022-04-04 00:00:00
 img: /assets/HotTakes.jpg 
 img_alt: image du Piiquante
+img_layout: screenshot
 description: |
   Création d'une API sécurisée pour une application d'avis gastronomique.
 tags:

@@ -3,6 +3,7 @@ title: Groupomania
 publishDate: 2022-07-04 00:00:00
 img: /assets/Groupomania.jpg
 img_alt: image du réseau social Groupomania
+img_layout: screenshot
 description: |
   Développement d'un réseau social d'entreprise.
 tags:

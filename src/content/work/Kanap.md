@@ -3,6 +3,7 @@ title: Kanap
 publishDate: 2022-02-05 00:00:00
 img: /assets/KanapPresentation.jpg
 img_alt: Image du site Kanap.
+img_layout: screenshot
 description: |
   Apprentissage de JavaScript en front par la mise en place d'une application web de e-commerce. Le site permettera la vente et la personnalisation de canapés.
 tags:
