@@ -83,6 +83,7 @@ const { Content } = await entry.render();
 
 	.tags {
 		display: flex;
+		flex-wrap: wrap;
 		gap: 0.5rem;
 	}
 
@@ -215,8 +216,14 @@ const { Content } = await entry.render();
 		}
 
 		.details {
-			flex-direction: row;
+			display: grid;
+			grid-template-columns: minmax(0, 1fr) minmax(20rem, 34rem);
+			align-items: start;
 			gap: 2.5rem;
+		}
+
+		.description {
+			margin: 0;
 		}
 
 		.content :global(blockquote) {
