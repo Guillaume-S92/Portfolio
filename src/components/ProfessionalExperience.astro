@@ -1,0 +1,238 @@
+---
+import Pill from "./Pill.astro";
+---
+
+<section class="experience" aria-labelledby="experience-title">
+  <header class="experience-header">
+    <div class="stack gap-2">
+      <p class="eyebrow">Expérience professionnelle</p>
+      <h2 id="experience-title">Développeur Java Full Stack chez FleetNote</h2>
+      <p class="summary">
+        Deux années d’alternance consacrées au développement et à la
+        modernisation d’applications métier Java, de la conception technique
+        jusqu’aux tests et au déploiement.
+      </p>
+    </div>
+    <div class="meta" aria-label="Informations sur l’expérience">
+      <strong>FleetNote</strong>
+      <span>Alternance · 2 ans</span>
+    </div>
+  </header>
+
+  <div class="missions">
+    <article class="mission">
+      <span class="mission-number">01</span>
+      <h3>Modernisation de l’application métier</h3>
+      <p>
+        Participation à la migration progressive d’une application Java EE
+        sous Payara vers Spring Boot et JoinFaces, avec maintien de la
+        compatibilité des pages JSF existantes.
+      </p>
+      <ul>
+        <li>Analyse et résolution de problèmes liés à Jakarta EL.</li>
+        <li>Développement d’un <code>ELResolver</code> personnalisé.</li>
+        <li>Préservation du fonctionnement du code legacy pendant la migration.</li>
+      </ul>
+    </article>
+
+    <article class="mission">
+      <span class="mission-number">02</span>
+      <h3>Enquêtes de satisfaction</h3>
+      <p>
+        Développement d’une application Spring Boot de suivi des enquêtes
+        clients, intégrant sécurité, synchronisation de données et génération
+        de rapports.
+      </p>
+      <ul>
+        <li>SSO OAuth2 / OpenID Connect et gestion fine des accès.</li>
+        <li>Architecture multi-datasource avec MariaDB et LimeSurvey.</li>
+        <li>Synchronisations planifiées et exports Excel avec Apache POI.</li>
+      </ul>
+    </article>
+
+    <article class="mission">
+      <span class="mission-number">03</span>
+      <h3>Synchronisation CRM et marketing</h3>
+      <p>
+        Conception d’un service Java 21 assurant la synchronisation
+        incrémentale entre SuiteCRM et Mailchimp.
+      </p>
+      <ul>
+        <li>Intégrations REST, pagination et traitements batch.</li>
+        <li>Retries, timeouts, journalisation et alertes en cas d’échec.</li>
+        <li>Traçabilité avec Spring Data JPA, MariaDB et Liquibase.</li>
+      </ul>
+    </article>
+  </div>
+
+  <div class="engineering">
+    <div>
+      <h3>Qualité et industrialisation</h3>
+      <p>
+        Tests unitaires, d’intégration et end-to-end avec JUnit 5, Mockito,
+        Awaitility, MariaDB4j et Playwright Java. Livraison continue avec Maven,
+        Docker, Bitbucket Pipelines, Nexus et Docker Hub.
+      </p>
+    </div>
+    <div class="technologies" aria-label="Technologies utilisées chez FleetNote">
+      <Pill>Java 21</Pill>
+      <Pill>Spring Boot</Pill>
+      <Pill>Spring Security</Pill>
+      <Pill>JPA</Pill>
+      <Pill>MariaDB</Pill>
+      <Pill>Liquibase</Pill>
+      <Pill>Playwright</Pill>
+      <Pill>Docker</Pill>
+      <Pill>CI/CD</Pill>
+    </div>
+  </div>
+</section>
+
+<style>
+  .experience {
+    display: grid;
+    gap: 2rem;
+    padding: clamp(1.5rem, 4vw, 3.5rem);
+    overflow: hidden;
+    border: 1px solid var(--gray-800);
+    border-radius: 1.5rem;
+    background:
+      linear-gradient(135deg, var(--accent-subtle-overlay), transparent 42%),
+      var(--gradient-subtle);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .experience-header {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .eyebrow,
+  .mission-number {
+    color: var(--accent-regular);
+    font-family: var(--font-brand);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .experience h2 {
+    max-width: 18ch;
+    font-size: var(--text-2xl);
+  }
+
+  .summary {
+    max-width: 64ch;
+    color: var(--gray-300);
+    font-size: var(--text-lg);
+  }
+
+  .meta {
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--gray-800);
+    border-radius: 1rem;
+    background: var(--gray-999_40);
+  }
+
+  .meta strong {
+    color: var(--gray-100);
+    font-family: var(--font-brand);
+    font-size: var(--text-lg);
+  }
+
+  .meta span {
+    color: var(--gray-400);
+  }
+
+  .missions {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .mission {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    border: 1px solid var(--gray-800);
+    border-radius: 1rem;
+    background: var(--gray-999_40);
+  }
+
+  .mission h3,
+  .engineering h3 {
+    font-size: var(--text-xl);
+  }
+
+  .mission p,
+  .mission li,
+  .engineering p {
+    color: var(--gray-300);
+  }
+
+  .mission ul {
+    display: grid;
+    gap: 0.5rem;
+    padding-left: 1.25rem;
+  }
+
+  .mission code {
+    color: var(--gray-100);
+    font-size: 0.9em;
+  }
+
+  .engineering {
+    display: grid;
+    gap: 1.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--gray-800);
+  }
+
+  .engineering p {
+    max-width: 68ch;
+    margin-top: 0.75rem;
+  }
+
+  .technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  @media (min-width: 50em) {
+    .experience {
+      gap: 3rem;
+      border-radius: 2rem;
+    }
+
+    .experience-header {
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: start;
+    }
+
+    .experience h2 {
+      font-size: var(--text-4xl);
+    }
+
+    .missions {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+
+    .mission {
+      padding: 2rem;
+      border-radius: 1.5rem;
+    }
+
+    .engineering {
+      grid-template-columns: minmax(0, 1.3fr) minmax(18rem, 1fr);
+      align-items: start;
+      gap: 3rem;
+    }
+  }
+</style>
